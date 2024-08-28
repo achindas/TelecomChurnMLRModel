@@ -71,6 +71,7 @@ The **Receiver Operating Characteristic (ROC) Curve** is a graphical representat
 $$
 	{TPR} = \frac{TP}{TP + FN}
 $$
+
 $$
 	{FPR} = \frac{FP}{FP + TN}
 $$
@@ -158,7 +159,10 @@ $$
 
 where $z$ in our model is defined as follows:
 
-$z = -1.658 - 0.943  \times  tenure + 0.346 \times PaperlessBilling + 0.46 \times SeniorCitizen - 0.722 \times Contract\_One\_year - 1.3 \times Contract\_Two\_year - 0.388 \times PaymentMethod\_Credit\_card - 0.331 \times PaymentMethod\_Mailed\_check + 0.805 \times InternetService\_Fiber - 0.973 \times InternetService\_No + 0.21 \times MultipleLines\_Yes - 0.405 \times TechSupport\_Yes + 0.34 \times StreamingTV\_Yes + 0.243 \times StreamingMovies\_Yes$
+$z = -1.658 - 0.943  \times  tenure + 0.346 \times PaperlessBilling + 0.46 \times SeniorCitizen - 0.722 \times Contract\_One\_year$ 
+$- 1.3 \times Contract\_Two\_year - 0.388 \times PaymentMethod\_Credit\_card - 0.331 \times PaymentMethod\_Mailed\_check$
+$+ 0.805 \times InternetService\_Fiber - 0.973 \times InternetService\_No + 0.21 \times MultipleLines\_Yes - 0.405 \times TechSupport\_Yes$
+$+ 0.34 \times StreamingTV\_Yes + 0.243 \times StreamingMovies\_Yes$
 
 Features with negative coefficients reduces `Churn` probability, while features with positive coefficients increases it.
 
